@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+/* ── CSS Custom Properties ── */
+:root {
+  --bg-primary: #0B0B0F;
+  --bg-secondary: #12121A;
+  --bg-card: #181822;
+  --bg-elevated: #20202C;
+  --accent-primary: #A78BFA;
+  --accent-secondary: #C4B5FD;
+  --text-primary: #F5F3FF;
+  --text-secondary: #A1A1AA;
+  --success: #34D399;
+  --warning: #FBBF24;
+  --error: #FB7185;
+  --border: #2D2D3D;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0B0B0F;
+  color: #F5F3FF;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #12121A;
+}
+::-webkit-scrollbar-thumb {
+  background: #2D2D3D;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A78BFA;
+}
+
+/* ── Custom Utilities ── */
+.glass {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #A78BFA, #C4B5FD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  border-radius: 1rem;
+  border: 1px solid #2D2D3D;
+  padding: 1.5rem;
+  background-color: #181822;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #A78BFA, #8B5CF6);
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: #20202C;
+  border: 1px solid #2D2D3D;
+  color: #F5F3FF;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+}
+.btn-secondary:hover {
+  background-color: #2D2D3D;
+}
+
+.input {
+  background-color: #20202C;
+  border: 1px solid #2D2D3D;
+  color: #F5F3FF;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1rem;
+  width: 100%;
+}
+.input::placeholder {
+  color: #A1A1AA;
+}
+.input:focus {
+  outline: none;
+  border-color: #A78BFA;
+  box-shadow: 0 0 0 1px #A78BFA;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
